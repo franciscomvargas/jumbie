@@ -103,32 +103,27 @@ scene.fog = new THREE.FogExp2(new THREE.Color("darkgray"), 0.005); // Previously
 
 //=========================================================================================== light
 var spotLight = new THREE.SpotLight(new THREE.Color('cyan'), .15); // Previously 'white'
-spotLight.position.set(5, 100, 0);
+spotLight.position.set(0, 500, 0);
 spotLight.castShadow = true;
 scene.add(spotLight);
 
 
 
-var sphereLight = new THREE.SphereGeometry(.075);
+var sphereLight = new THREE.SphereGeometry(.125);
 var sphereLightMaterial = new THREE.MeshBasicMaterial({
-  color: new THREE.Color("white")
+  color: new THREE.Color("darkorange")
 });
 var sphereLightMesh = new THREE.Mesh(sphereLight, sphereLightMaterial);
 sphereLightMesh.castShadow = true;
-sphereLightMesh.position.set(0,2.5,0)
+sphereLightMesh.position.set(0,5,0)
 scene.add(sphereLightMesh);
 
 
-var distance = 30;
-var intensity = 0.35;
+var distance = 60;
+var intensity = 0.4;
 
-var pointLight2 = new THREE.PointLight(new THREE.Color('red'), intensity, distance);
-pointLight2.position.set(0, 0, -5);
-scene.add(pointLight2);
-
-
-var pointLight3 = new THREE.PointLight(new THREE.Color('#808000'), intensity, distance);
-pointLight3.position.set(0, 0, 5);
+var pointLight3 = new THREE.PointLight(new THREE.Color('darkorange'), intensity, distance);
+pointLight3.position.set(0, 0, 0);
 scene.add(pointLight3);
 
 
@@ -149,7 +144,7 @@ var groundMaterial = new THREE.MeshPhongMaterial({
   shininess: 50,
   bumpMap: floorMap
 });
-var groundGeo = new THREE.PlaneGeometry(200, 200);
+var groundGeo = new THREE.PlaneGeometry(300, 300);
 var ground = new THREE.Mesh(groundGeo, groundMaterial);
 
 
@@ -165,9 +160,9 @@ scene.add(ground);
 var loader = new THREE.LegacyJSONLoader();
 loader.load("https://raw.githubusercontent.com/baronwatts/models/master/real-tree2.js", function(geometry, materials) {
 
-  new Array(120).fill(null).map( (d, i) => {
-    x = Math.cos(i/100 * Math.PI * 2) * randnum(7,100);
-    z = Math.sin(i/100 * Math.PI * 2) * randnum(7,100);
+  new Array(200).fill(null).map( (d, i) => {
+    x = Math.cos(i/100 * Math.PI * 2) * randnum(7,200);
+    z = Math.sin(i/100 * Math.PI * 2) * randnum(7,200);
     y = -1;
 
     var obj = new THREE.Mesh(geometry, materials);
