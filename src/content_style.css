@@ -15,7 +15,7 @@
   --second-color: #3e537c;
   --second-color-alt: hsla(220, 33%, 36%, 65%);
   --third-color: hsl(220, 36%, 28%);
-  --white-color: #fbfbfb;
+  /* --white-color: #fbfbfb; */
   --white-color-alt: hsl(12, 14%, 93%);
   --dark-color: hsl(300, 100%, 0%);
 }
@@ -116,8 +116,9 @@ header {
 
 /* -------- HOME SECTION -------------- */
 .section-1 {
-  background-color: var(--dark-color);
+  background-color: none; /* Prvious 'var(--dark-color)' */
   display: grid;
+  margin-top: -200px;
 }
 /* .home-computer-container {} */
 
@@ -440,12 +441,14 @@ input[type="submit"]:hover {
     padding: 10rem 5rem 0 5rem;
   }
   .slogan .company-title {
-    max-width: 30rem;
+    max-width: 50rem;
+    min-width: 30rem;
     font-size: 1.8rem;
     letter-spacing: 0.5rem;
   }
   .slogan .company-slogan {
-    max-width: 20rem;
+    max-width: 70rem;
+    min-width: 30rem;
     font-size: 1.3rem;
   }
   /* -------- OFFER SECTION ------------- */

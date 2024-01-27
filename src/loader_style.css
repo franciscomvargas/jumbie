@@ -1,0 +1,75 @@
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #3498db; /* Change the color to fit your theme */
+    -webkit-animation: spin 2s linear infinite; /* Chrome, Safari, Opera */
+    animation: spin 2s linear infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+/* Standard syntax */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Make the background slightly dark to make loader visible. */
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(0,0,0,0.7); /* Darken background */
+    z-index: 1000;
+}
+
+.section-left {
+    left: 0;
+}
+
+.section-right {
+    right: 0;
+}
+
+/* When loading is finished, animate loader wrapper out */
+.loaded #loader-wrapper .loader-section.section-left {
+    transform: translateX(-100%); /* Slide out to the left */
+    transition: all 0.7s 0.3s;
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+    transform: translateX(100%); /* Slide out to the right */
+    transition: all 0.7s 0.3s;
+}
+
+.loaded #loader {
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+/* Fully hide the loader wrapper to prevent interaction */
+.loaded #loader-wrapper {
+    visibility: hidden;
+    transition: all 0.3s 1s; /* Wait for slide out */
+}
