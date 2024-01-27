@@ -499,7 +499,6 @@ function onDocumentMouseMove(event) {
       renderer.render(scene, camera);
       camera.position.x += ( mouseX - camera.position.x ) * .025;
       camera.lookAt( scene.position );
-      document.querySelector('.btn-group').classList.remove('hide');
   }
   
    //smoke.rotation.y += .025;

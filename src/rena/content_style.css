@@ -117,10 +117,9 @@ header {
 /* -------- HOME SECTION -------------- */
 .section-1 {
   position: absolute;
-  left: 2em;
   bottom: 4em;
   background-color: none; /* Prvious 'var(--dark-color)' */
-  display: grid;
+  display: block;
   margin-top: -200px;
 }
 /* .home-computer-container {} */
@@ -133,9 +132,10 @@ header {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   font-size: 1.5rem;
   font-weight: 600;
+  text-align: center;
 }
 .slogan .company-slogan {
   background: -webkit-linear-gradient(
@@ -149,6 +149,7 @@ header {
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.8rem;
+  text-align: center;
 }
 
 /* -------- OFFER SECTION ------------- */
@@ -441,7 +442,6 @@ input[type="submit"]:hover {
   .section-1 {
     justify-content: space-between;
     grid-template-columns: 1fr 1fr;
-    padding: 10rem 5rem 0 5rem;
   }
   .slogan .company-title {
     max-width: 50rem;
