@@ -116,6 +116,9 @@ header {
 
 /* -------- HOME SECTION -------------- */
 .section-1 {
+  position: absolute;
+  left: 2em;
+  bottom: 4em;
   background-color: none; /* Prvious 'var(--dark-color)' */
   display: grid;
   margin-top: -200px;
