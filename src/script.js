@@ -99,7 +99,7 @@ window.addEventListener("resize", function() {
 
 
 //=========================================================================================== fog
-scene.fog = new THREE.FogExp2(new THREE.Color("darkslateblue"), 0.005); // Previously 'lightblue'
+scene.fog = new THREE.FogExp2(new THREE.Color("darkgray"), 0.005); // Previously 'lightblue'
 
 //=========================================================================================== light
 var spotLight = new THREE.SpotLight(new THREE.Color('cyan'), .15); // Previously 'white'
@@ -109,17 +109,17 @@ scene.add(spotLight);
 
 
 
-var sphereLight = new THREE.SphereGeometry(.05);
+var sphereLight = new THREE.SphereGeometry(.125);
 var sphereLightMaterial = new THREE.MeshBasicMaterial({
   color: new THREE.Color("white")
 });
 var sphereLightMesh = new THREE.Mesh(sphereLight, sphereLightMaterial);
 sphereLightMesh.castShadow = true;
 sphereLightMesh.position.set(0,2.5,0)
-//scene.add(sphereLightMesh);
+scene.add(sphereLightMesh);
 
 
-var distance = 20;
+var distance = 80;
 var intensity = 0.5;
 
 var pointLight2 = new THREE.PointLight(new THREE.Color('red'), intensity, distance);
@@ -142,7 +142,7 @@ floorMap.repeat.set(50, 50);
 
 var groundMaterial = new THREE.MeshPhongMaterial({
   // color: new THREE.Color('#111'),
-  color: new THREE.Color('#555'),
+  color: new THREE.Color('#222'),
   // specular: new THREE.Color('#808000'),
   specular: new THREE.Color('#666'),
   //specular: new THREE.Color('#333'),
@@ -304,23 +304,24 @@ function loadModels() {
 
 
 //=========================================================================================== model ~ tent + logs
-  loader = new THREE.LegacyJSONLoader();
-  loader.load('https://raw.githubusercontent.com/baronwatts/models/master/camp.js', function(geometry, materials) {
-    var matt = new THREE.MeshLambertMaterial({
-      vertexColors: THREE.FaceColors,
-      transparent: true,
-      opacity: 1,
-      side: THREE.DoubleSide
-    });
-    var wall = new THREE.Mesh(geometry, matt);
-    wall.position.set(0, 0, 0);
-    wall.rotateY(Math.PI);
-    wall.scale.set(4, 4, 4);
-    scene.add(wall);
+  // loader = new THREE.LegacyJSONLoader();
+  // loader.load('https://raw.githubusercontent.com/baronwatts/models/master/camp.js', function(geometry, materials) {
+  //   var matt = new THREE.MeshLambertMaterial({
+  //     vertexColors: THREE.FaceColors,
+  //     transparent: true,
+  //     opacity: 1,
+  //     side: THREE.DoubleSide
+  //   });
+  //   var wall = new THREE.Mesh(geometry, matt);
+  //   wall.position.set(0, 0, 0);
+  //   wall.rotateY(Math.PI);
+  //   wall.scale.set(4, 4, 4);
+  //   scene.add(wall);
     
-    onAssetLoaded();
-    console.log("🚀 ~ loader.load ~ assetsLoaded:", assetsLoaded)
-  });
+  //   onAssetLoaded();
+  //   console.log("🚀 ~ loader.load ~ assetsLoaded:", assetsLoaded)
+  // });
+  onAssetLoaded();
 
 
 
@@ -408,11 +409,11 @@ Object.defineProperties(THREE.Object3D.prototype, {
 
 
 
-  //===================================================== add particle texture for model
-  var geometry = new THREE.BoxBufferGeometry( 0.2, 0.2, 0.2 );
+  //===================================================== add particle texture for model ~fire
+var geometry = new THREE.BoxBufferGeometry( 0.2, 0.2, 0.2 );
 var material = new THREE.MeshNormalMaterial({transparent: true,opacity:0});
 var mesh2 = new THREE.Mesh( geometry, material );
- mesh2.position.set(5, 0, -5);
+mesh2.position.set(5, 0, -5);
 scene.add(mesh2);
   var textureLoader = new THREE.TextureLoader();
   textureLoader.crossOrigin = ''; //allow cross origin loading
@@ -428,13 +429,13 @@ scene.add(mesh2);
   var smoke = new THREE.Group();
   mesh2.add(smoke);
   var matts = new THREE.PointsMaterial({
-      size: 5,
+      size: 3,
       color: new THREE.Color("hsl("+Math.floor(randnum(10,50))+",50%,50%)"),
       map:  uniforms.map.value,
       blending: THREE.AdditiveBlending,
       depthWrite: false,
       transparent: true,
-      opacity: .5
+      opacity: .7
   });
 
 
@@ -444,11 +445,11 @@ scene.add(mesh2);
   var sparks = new THREE.Points(geo, matts );
   sparks.scale.set(1,1,1);
 
-  for(var i = 0; i < 50; i++){
-    var clone = sparks.clone();
-     clone.position.set( (Math.random() - 0.5) * randnum(randnum(.5,2),randnum(.5,2)) , 0 ,(Math.random() - 0.5) * randnum(randnum(.5,2),randnum(.5,2)) );
-     smoke.add(clone);
-  }
+  // for(var i = 0; i < 50; i++){
+  //   var clone = sparks.clone();
+  //    clone.position.set( (Math.random() - 0.5) * randnum(randnum(.5,2),randnum(.5,2)) , 0 ,(Math.random() - 0.5) * randnum(randnum(.5,2),randnum(.5,2)) );
+  //    smoke.add(clone);
+  // }
  
 
 //=========================================================================================== add Animation
