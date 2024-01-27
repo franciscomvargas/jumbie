@@ -15,7 +15,7 @@
   --second-color: #3e537c;
   --second-color-alt: hsla(220, 33%, 36%, 65%);
   --third-color: hsl(220, 36%, 28%);
-  /* --white-color: #fbfbfb; */
+  --white-color: #343434;
   --white-color-alt: hsl(12, 14%, 93%);
   --dark-color: hsl(300, 100%, 0%);
 }
