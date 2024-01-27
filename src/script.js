@@ -120,7 +120,7 @@ scene.add(sphereLightMesh);
 
 
 var distance = 60;
-var intensity = 0.4;
+var intensity = 0.25;
 
 var pointLight3 = new THREE.PointLight(new THREE.Color('darkorange'), intensity, distance);
 pointLight3.position.set(0, 0, 0);
