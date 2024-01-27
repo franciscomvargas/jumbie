@@ -109,7 +109,7 @@ scene.add(spotLight);
 
 
 
-var sphereLight = new THREE.SphereGeometry(.125);
+var sphereLight = new THREE.SphereGeometry(.075);
 var sphereLightMaterial = new THREE.MeshBasicMaterial({
   color: new THREE.Color("white")
 });
@@ -119,8 +119,8 @@ sphereLightMesh.position.set(0,2.5,0)
 scene.add(sphereLightMesh);
 
 
-var distance = 80;
-var intensity = 0.5;
+var distance = 30;
+var intensity = 0.35;
 
 var pointLight2 = new THREE.PointLight(new THREE.Color('red'), intensity, distance);
 pointLight2.position.set(0, 0, -5);
