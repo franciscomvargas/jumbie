@@ -110,6 +110,19 @@ td.home_right{
 img.home-logo {
   width: 20em;
 }
+.logo_line{
+  width: 20em;
+  height: 10px;
+  border-radius: 5px;
+  background: linear-gradient(
+    90deg,
+    #9B91D9 0%,
+    #91A3D9 25%,
+    #9FD98F 50%,
+    #D6D991 75%,
+    #D18FB2 100%
+  );
+}
 span.home-slogan {
   margin-top: 2em;
 }
