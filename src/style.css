@@ -49,11 +49,35 @@ header {
     var(--primary-color-alt),
     var(--primary-color)
   ); */
+  text-decoration: none; 
+}
+
+.nav-home{
+  background: #9B91D9;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-about{
   background: var(--white-color);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-decoration: none; 
 }
+.nav-services{
+  background: var(--white-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-portfolio{
+  background: var(--white-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-contacts{
+  background: var(--white-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .nav-link::before {
   content: "";
   background: linear-gradient(var(--dark-color), var(--primary-color-alt));
@@ -70,6 +94,7 @@ header {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
 .menu-toggle {
   display: none;
 }
@@ -124,6 +149,10 @@ img.home-logo {
   );
 }
 
+span.home-slogan {
+  padding-left: 0.2em;
+}
+
 .search-bar::before {
   content: "";
   background: linear-gradient(
@@ -148,8 +177,4 @@ img.home-logo {
 .search-bar:hover::before {
   transform: scaleX(1);
   transform-origin: bottom left;
-}
-
-span.home-slogan {
-  margin-top: 2em;
 }
