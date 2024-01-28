@@ -112,10 +112,10 @@ img.home-logo {
 }
 .logo_line{
   width: 20em;
-  height: 10px;
-  border-radius: 5px;
+  height: 0.3em;
+  border-radius: 0.15em;
   background: linear-gradient(
-    90deg,
+    120deg,
     #9B91D9 0%,
     #91A3D9 25%,
     #9FD98F 50%,
@@ -123,6 +123,33 @@ img.home-logo {
     #D18FB2 100%
   );
 }
+
+.search-bar::before {
+  content: "";
+  background: linear-gradient(
+    120deg,
+    #9B91D9 0%,
+    #91A3D9 25%,
+    #9FD98F 50%,
+    #D6D991 75%,
+    #D18FB2 100%
+  );
+  width: 100%;
+  height: 0.3em;
+  border-radius: 0.15em;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 150ms;
+}
+
+.search-bar:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 span.home-slogan {
   margin-top: 2em;
 }
