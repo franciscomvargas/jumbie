@@ -111,7 +111,7 @@ scene.add(spotLight);
 
 var sphereLight = new THREE.SphereGeometry(.125);
 var sphereLightMaterial = new THREE.MeshBasicMaterial({
-  color: new THREE.Color("darkorange")
+  color: new THREE.Color("#D6D991")
 });
 var sphereLightMesh = new THREE.Mesh(sphereLight, sphereLightMaterial);
 sphereLightMesh.castShadow = true;
@@ -122,7 +122,7 @@ scene.add(sphereLightMesh);
 var distance = 60;
 var intensity = 0.25;
 
-var pointLight3 = new THREE.PointLight(new THREE.Color('darkorange'), intensity, distance);
+var pointLight3 = new THREE.PointLight(new THREE.Color('#D18FB2'), intensity, distance);
 pointLight3.position.set(0, 0, 0);
 scene.add(pointLight3);
 
@@ -155,7 +155,7 @@ scene.add(ground);
 
 
 
-//===================================================== add tree
+//===================================================== add trees
 //3D Model from http://www.sweethome3d.com/searchModels.jsp?model=tree&x=0&y=0
 var loader = new THREE.LegacyJSONLoader();
 loader.load("https://raw.githubusercontent.com/baronwatts/models/master/real-tree2.js", function(geometry, materials) {

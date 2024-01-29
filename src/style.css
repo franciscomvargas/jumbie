@@ -38,6 +38,7 @@ header {
   padding: 1rem 6rem;
 }
 .company-logo {
+  visibility: hidden;
   margin-top: -1rem;
   height: 2rem;
 }
@@ -117,21 +118,15 @@ header {
 table.center{
   table-layout: fixed;
   margin-top: 2em;
-  margin-left: auto;
-  margin-right: auto;
   width: 100%;
 }
 td.home_left{
-  text-align: left;
-  padding-left: 8em;
-}
-td.home_right{
   text-align: right;
-  width: 600px;
-  padding-right: 4em;
+  padding-right: 30em;
 }
 td{
   border: none;
+  /* border: 1px solid white; */
 }
 
 img.home-logo {
@@ -141,6 +136,10 @@ img.home-logo {
   width: 20em;
   height: 0.3em;
   border-radius: 0.15em;
+  position: absolute;
+  top: 24em;
+  left:50%;
+  margin-left:-50em;
   background: var(--l3-color);
   background: -moz-linear-gradient(
     120deg,
