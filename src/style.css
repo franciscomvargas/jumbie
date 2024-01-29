@@ -135,6 +135,7 @@ td{
 img.home-logo {
   width: 20em;
 }
+
 .logo_line{
   width: 20em;
   height: 0.3em;
@@ -196,7 +197,6 @@ img.home-logo {
   -moz-animation: errorBg 12s ease infinite;
   animation: errorBg 12s ease infinite;
 }
-
 @-webkit-keyframes errorBg {
     0% {
         background-position: 93% 0%
@@ -232,10 +232,6 @@ img.home-logo {
         background-position: 93% 0%
     }
 }
-
-
-
-
 
 span.home-slogan {
   padding-left: 0.2em;
