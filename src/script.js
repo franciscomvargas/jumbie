@@ -39,13 +39,26 @@ $('.nav-home, .company-logo').on( "click", function() {
     $('.nav-home').css('background-color', l1_color);
     $('.section-homepage').css('display', 'block');
     $('.section-about').css('display', 'none');
+    $('.section-services').css('display', 'none');
     document.title = 'Jumbie';
 })
+
 $('.nav-about').on( "click", function() {
     light_theme();
     // home_replace(false)
     $('.nav-about').css('background-color', l2_color);
     $('.section-homepage').css('display', 'none');
     $('.section-about').css('display', 'block');
+    $('.section-services').css('display', 'none');
     document.title = 'Jumbie ~ About';
+})
+
+$('.nav-services').on( "click", function() {
+    light_theme();
+    // home_replace(false)
+    $('.nav-services').css('background-color', l3_color);
+    $('.section-homepage').css('display', 'none');
+    $('.section-about').css('display', 'none');
+    $('.section-services').css('display', 'block');
+    document.title = 'Jumbie ~ Services';
 })

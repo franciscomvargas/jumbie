@@ -265,9 +265,9 @@ span.home-slogan {
 
 
 /* ================= ABOUT CONTENT ================ */
-.section-about{ display: none; }
 /* About */
 .section-about{
+  display: none;
   color: var(--dark-color);
   width: 100%;
 }
@@ -348,3 +348,10 @@ span.home-slogan {
   /* padding-top:20px; */
   padding-bottom:34px;
 }
+
+/* ================= SERVICES CONTENT ================ */
+.section-services { display: none; }
+.section-services h1{
+  text-align: center;
+}
+.section_line.services { width: 9em; }
