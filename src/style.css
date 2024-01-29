@@ -118,11 +118,14 @@ header {
 table.center{
   table-layout: fixed;
   margin-top: 2em;
-  width: 100%;
+  min-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 td.home_left{
-  text-align: right;
-  padding-right: 30em;
+  width: 50%;
+  text-align: left;
+  padding-left: 2em;
 }
 td{
   border: none;
@@ -138,8 +141,7 @@ img.home-logo {
   border-radius: 0.15em;
   position: absolute;
   top: 24em;
-  left:50%;
-  margin-left:-50em;
+  margin-left:0em;
   background: var(--l3-color);
   background: -moz-linear-gradient(
     120deg,
@@ -189,10 +191,10 @@ img.home-logo {
     var(--l4-color) 75%,
     var(--l5-color) 100%
   );
-  background-size: 150% 150%;
-  -webkit-animation: errorBg 15s ease infinite;
-  -moz-animation: errorBg 15s ease infinite;
-  animation: errorBg 15s ease infinite;
+  background-size: 130% 130%;
+  -webkit-animation: errorBg 12s ease infinite;
+  -moz-animation: errorBg 12s ease infinite;
+  animation: errorBg 12s ease infinite;
 }
 
 @-webkit-keyframes errorBg {
@@ -254,7 +256,7 @@ span.home-slogan {
   border-radius: 0.15em;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 0%;
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 150ms;
