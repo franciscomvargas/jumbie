@@ -293,6 +293,10 @@ span.home-slogan {
 .section_line.about { width: 14em; }
 .section_line.values { width: 12em; }
 
+.about_div {
+  position: absolute;
+  width: 100%;
+}
 .about_table {
   margin-top: 1em;
   text-align: center;
@@ -306,18 +310,20 @@ span.home-slogan {
 }
 
 /* Core Values */
+.values_title {
+  margin-top: 6em;
+}
 .values-table {
   max-width:1300px;
   margin:0;
   padding:0;
   font-size:0px;
-  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 .values-div {
   display:inline-block;
-  background-color:#E3E3E3;
+  background-color:#f3f3f3;
   max-width:500px;
   border-radius:20px;
   margin:10px;
@@ -327,7 +333,7 @@ span.home-slogan {
 }
 
 .values-textarea {
-  background-color:#E3E3E3;
+  background-color:#f3f3f3;
   border-radius:20px;
 }
 
@@ -342,16 +348,25 @@ span.home-slogan {
   line-height:24px;
   text-align:left;
   max-width:450px;
-  background-color:#E3E3E3;
+  background-color:#f3f3f3;
   padding-left:24px;
   padding-right:24px;
-  /* padding-top:20px; */
+  padding-top:20px;
   padding-bottom:34px;
 }
 
+.values-textcontent img {
+  display: block;
+}
 /* ================= SERVICES CONTENT ================ */
 .section-services { display: none; }
 .section-services h1{
   text-align: center;
 }
 .section_line.services { width: 9em; }
+
+.topcenter_icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
