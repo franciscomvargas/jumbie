@@ -113,7 +113,9 @@ header {
 }
 
 /* ================= HOMEPAGE CONTENT ================ */
-.section-homepage{ display: block; }
+.section-homepage{ 
+  display: block;
+}
 
 table.center{
   table-layout: fixed;
@@ -359,7 +361,9 @@ span.home-slogan {
   display: block;
 }
 /* ================= SERVICES CONTENT ================ */
-.section-services { display: none; }
+.section-services { 
+  display: none;
+}
 .section-services h1{
   text-align: center;
 }
