@@ -116,7 +116,49 @@ header {
 
 
 
+/* ================= ASSETS ================ */
+.action-button {
+  font-size: 14px;
+  width: 204px;
+  height: 54px;
+  background: var(--l1-color);
+  color: #fff;
+  opacity: 1;
+  /* position: absolute;
+  top: 0px;
+  left: 0px; */
+  overflow: hidden;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+.action-text {
+  width: 66px;
+  color: #fff;
+  position: relative;
+  top: 12px;
+  font-weight: Medium;
+  font-size: 24px;
+  opacity: 1;
+  text-align: left;
+}
 
+
+.section_line{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -1.2em;
+  height: 0.2em;
+  border-radius: 0.1em;
+  background: linear-gradient(
+    120deg,
+    var(--l1-color) 0%,
+    var(--l2-color) 25%,
+    var(--l3-color) 50%,
+    var(--l4-color) 75%,
+    var(--l5-color) 100%
+  );
+}
 
 
 /* ================= HOMEPAGE CONTENT ================ */
@@ -150,7 +192,7 @@ img.home-logo {
   height: 0.3em;
   border-radius: 0.15em;
   position: absolute;
-  top: 23em;
+  top: 20.5em;
   margin-left:0em;
   background: linear-gradient(
     120deg,
@@ -239,29 +281,10 @@ span.home-slogan {
 
 
 /* ================= ABOUT CONTENT ================ */
+.section-about{ display: none; }
 /* About */
-.section-about{
-  display: none;
-  color: var(--dark-color);
-  width: 100%;
-}
 .section-about h1{
   text-align: center;
-}
-.section_line{
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -1.2em;
-  height: 0.2em;
-  border-radius: 0.1em;
-  background: linear-gradient(
-    120deg,
-    var(--l1-color) 0%,
-    var(--l2-color) 25%,
-    var(--l3-color) 50%,
-    var(--l4-color) 75%,
-    var(--l5-color) 100%
-  );
 }
 
 .section_line.about { width: 14em; }
@@ -349,7 +372,97 @@ span.home-slogan {
 
 
 
+/* ================= CONTACT CONTENT ================ */
+.section-contact{ 
+  display: none;
+  text-align: center;
+}
+.section_line.contact { width: 8em; }
 
+
+ form {
+  max-width: 1200px;
+	padding: 30px 40px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.form-control label {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.form-control input {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+
+.form-control input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+.form-control i {
+	visibility: hidden;
+	position: absolute;
+	top: 40px;
+	right: 10px;
+}
+
+.form-control.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+form button {
+	background-color: var(--l1-color);
+	border-radius: 2px solid var(--l1-color);
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-family: inherit;
+	font-size: 16px;
+	margin-left: 14px;
+	margin-top: 20px;
+	width: 100%;
+}
 
 
 
@@ -363,7 +476,7 @@ span.home-slogan {
 .footer .container_footer {
 	max-width: 1200px;
 	margin: auto;
-  padding: 30px;
+  padding-left: 30px;
 }
 
 .footer .row {
@@ -373,7 +486,7 @@ span.home-slogan {
 
 .footer ul {
 	list-style: none;
-  margin-left: -30px;
+  margin-left: -40px;
 }
 
 .footer-col {
@@ -384,7 +497,7 @@ span.home-slogan {
 	font-size: 18px;
 	color: #FFF;
 	text-transform: capitalize;
-	margin-bottom: 35px;
+	margin-bottom: 16px;
 	font-weight: 500;
 	position: relative;
 }

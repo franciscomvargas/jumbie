@@ -16,7 +16,7 @@
                 <span class="nav-link nav-about sty-about"><strong>About</strong></span>
                 <span class="nav-link nav-services sty-services"><strong>Services</strong></span>
                 <span class="nav-link nav-portfolio sty-portfolio"><strong>Portfolio</strong></span>
-                <span class="nav-link nav-contacts sty-contacts"><strong>Contacts</strong></span>
+                <span class="nav-link nav-contact sty-contact"><strong>Contact</strong></span>
             </ul>
         </nav>
         <div class="menu-toggle">
@@ -30,14 +30,17 @@
             <tr>
                 <!-- logo + slogan -->
                 <td class="home_left">
-                    <img class="home-logo" src="assets/logo.svg" alt="Jumbie Logo"><br>
+                    <img class="home-logo" src="assets/logo.svg" alt="Jumbie Logo"> <br />
                     <span class="logo_line"></span> <br />
                     <span class="home-slogan">
-                        Empowering <strong>Innovation</strong><br>
-                    </span>
+                        Empowering <strong>Innovation</strong>
+                    </span> <br />
                     <span class="home-slogan">
                         Simplifying <strong>Solutions</strong>
-                    </span>
+                    </span> <br />
+                    <div class="action-button action-contact" style="margin-top: 2em;">
+                        <span class="action-text">Contact</span>
+                    </div>
                 </td>
                 <!-- 3d model -->
                 <td class="home_right">
@@ -461,6 +464,65 @@
         </table>
     </div>
     
+    <div class="section-contact">
+        <h1>Contact</h1>
+        <div class="section_line contact"></div><br>
+        <!-- 
+        //    Name : entry.1604566445
+        //  E-mail : entry.1210519929
+        // Service : entry.1196420835
+        //  Budget : entry.1779864861
+        // Message : entry.277011542 
+        -->
+        <form>
+		    <div class="form-control">
+                <label for="nameField">Name</label>
+                <input type="text" id="nameField" name="entry.1604566445" placeholder="Name" /> <br />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+		    <div class="form-control">
+                <label for="emailField">Email</label>
+                <input type="email" id="emailField" name="entry.1210519929" placeholder="email@example.com" /> <br />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+		    <div class="form-control">
+                <label for="serviceField">Service</label> <br />
+                <select id="serviceField" name="entry.1196420835" placeholder="Select Cinema" required>
+                    <option value="software">Software Development</option>
+                    <option value="design">UI / UX Design</option>
+                    <option value="consulting">Consulting</option>
+                </select> <br />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+		    <div class="form-control">
+                <label for="budgetField">Budget</label>
+                <input type="text" id="budgetField" name="entry.1779864861" /> <br />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+		    <div class="form-control">
+                <label for="messageField">Message</label>
+                <input type="text" id="messageField" name="entry.277011542" /> <br />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
     <footer class="footer">
 		<div class="container_footer row">
 			<div class="footer-col">
@@ -469,18 +531,15 @@
 					<li><span class="nav-about">About</span></li>
 					<li><span class="nav-services">Services</span></li>
 					<li><span class="nav-portfolio">Portfolio</span></li>
-					<li><span class="nav-contacts">Contact</span></li>
+					<li><span class="nav-contact">Contact</span></li>
 				</ul>
 			</div>
 			<div class="footer-col">
 				<h4 class="services">SERVICES</h4>
 				<ul>
-					<li><span>Web Development</span></li>
-					<li><span>Mobile App Development</span></li>
-					<li><span>E-commerce</span></li>
-					<li><span>Graphic Design</span></li>
+					<li><span>Software Development</span></li>
 					<li><span>UI / UX Design</span></li>
-					<li><span>API Solutions</span></li>
+					<li><span>Consulting</span></li>
 				</ul>
 			</div>
 			<div class="footer-col">
@@ -500,4 +559,5 @@
 	<script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
     <!-- Internal Imports -->
     <script src="script.js"></script>
+    <script src="sheets.js"></script>
 </body>
