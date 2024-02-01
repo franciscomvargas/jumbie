@@ -1,5 +1,6 @@
 /* ================= VARIABLE ================ */
 const dark_color = 'black'
+const dark_color_alt = '#3d3d3d'
 const white_color = 'white'
 const l1_color = '#9B91D9';
 const l2_color = '#91A3D9';
@@ -15,6 +16,7 @@ function dark_theme() {
     $('body').css('color', white_color);
 
     $('.sty-home, .sty-about, .sty-services, .sty-portfolio, .sty-contacts').css('background-color', white_color);
+    $('.footer').css('background-color', dark_color);
 }
 function light_theme() {
     $('body').css('background-color', white_color);
@@ -23,6 +25,7 @@ function light_theme() {
     $('body').css('color', dark_color);
     
     $('.sty-home, .sty-about, .sty-services, .sty-portfolio, .sty-contacts').css('background-color', white_color);
+    $('.footer').css('background-color', dark_color_alt);
 }
 // function home_replace(toHome){
 //     if (toHome){

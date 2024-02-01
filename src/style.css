@@ -11,6 +11,8 @@
   --white-color: #ffffff;
   --white-color-alt: hsl(12, 14%, 93%);
   --dark-color: hsl(300, 100%, 0%);
+  --dark-color-alt: #3d3d3d;
+
   /* magic line */
   --l1-color: #9B91D9;
   --l2-color: #91A3D9;
@@ -386,7 +388,7 @@ span.home-slogan {
 /* ================= JUMBIE FOOTER ================ */
 .footer {
   margin-top: 100px;
-	background-color: #3d3d3d;
+	background-color: var(--dark-color);
 }
 
 .footer .container_footer {
