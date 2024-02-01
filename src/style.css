@@ -143,7 +143,7 @@ img.home-logo {
   height: 0.3em;
   border-radius: 0.15em;
   position: absolute;
-  top: 24em;
+  top: 23em;
   margin-left:0em;
   background: var(--l3-color);
   background: -moz-linear-gradient(
@@ -237,6 +237,7 @@ img.home-logo {
 
 span.home-slogan {
   padding-left: 0.2em;
+  font-size: 1.5rem;
 }
 
 .search-bar::before {
@@ -296,7 +297,6 @@ span.home-slogan {
 .section_line.values { width: 12em; }
 
 .about_div {
-  position: absolute;
   width: 100%;
 }
 .about_table {
@@ -313,7 +313,7 @@ span.home-slogan {
 
 /* Core Values */
 .values_title {
-  margin-top: 6em;
+  margin-top: 2em;
 }
 .values-table {
   max-width:1300px;
@@ -385,11 +385,12 @@ span.home-slogan {
 
 /* ================= JUMBIE FOOTER ================ */
 .footer {
-	background-color: var(--dark-color);
+  margin-top: 100px;
+	background-color: #3d3d3d;
 }
 
 .footer .container_footer {
-	max-width: 100%;
+	max-width: 1200px;
 	margin: auto;
   padding: 30px;
 }
@@ -401,6 +402,7 @@ span.home-slogan {
 
 .footer ul {
 	list-style: none;
+  margin-left: -30px;
 }
 
 .footer-col {
@@ -417,20 +419,31 @@ span.home-slogan {
 }
 
 .footer-col h4::before {
-	content: "";
-	position: absolute;
-	left: 0;
-	bottom: -10px;
-	background-color: #E91E63;
-	width: 50px;
-	height: 2px;
+  content: "";
+  background: linear-gradient(
+    120deg,
+    var(--l1-color) 0%,
+    var(--l2-color) 25%,
+    var(--l3-color) 50%,
+    var(--l4-color) 75%,
+    var(--l5-color) 100%
+  );
+  width:100px;
+  height: 0.08rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
+
+.footer-col h4.links::before { width:5em;}
+.footer-col h4.services::before { width:4.8em;}
+.footer-col h4.follow::before { width:5.9em;}
 
 .footer-col ul li:not(:last-child) {
 	margin-bottom: 10px;
 }
 
-.footer-col ul li a {
+.footer-col ul li span {
 	color: #DDD;
 	display: block;
 	font-size: 1rem;
@@ -438,9 +451,10 @@ span.home-slogan {
 	text-transform: capitalize;
 	text-decoration: none;
 	transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.footer-col ul li a:hover {
+.footer-col ul li span:hover {
 	color: #FFF;
 	padding-left: 7px;
 }

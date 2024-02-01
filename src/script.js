@@ -14,7 +14,7 @@ function dark_theme() {
 
     $('body').css('color', white_color);
 
-    $('.nav-home, .nav-about, .nav-services, .nav-portfolio, .nav-contacts').css('background-color', white_color);
+    $('.sty-home, .sty-about, .sty-services, .sty-portfolio, .sty-contacts').css('background-color', white_color);
 }
 function light_theme() {
     $('body').css('background-color', white_color);
@@ -22,7 +22,7 @@ function light_theme() {
 
     $('body').css('color', dark_color);
     
-    $('.nav-home, .nav-about, .nav-services, .nav-portfolio, .nav-contacts').css('background-color', white_color);
+    $('.sty-home, .sty-about, .sty-services, .sty-portfolio, .sty-contacts').css('background-color', white_color);
 }
 // function home_replace(toHome){
 //     if (toHome){
@@ -36,7 +36,7 @@ function light_theme() {
 $('.nav-home, .company-logo').on( "click", function() {
     dark_theme();
     // home_replace(true)
-    $('.nav-home').css('background-color', l1_color);
+    $('.sty-home').css('background-color', l1_color);
     $('.section-homepage').css('display', 'block');
     $('.section-about').css('display', 'none');
     $('.section-services').css('display', 'none');
@@ -46,7 +46,7 @@ $('.nav-home, .company-logo').on( "click", function() {
 $('.nav-about').on( "click", function() {
     light_theme();
     // home_replace(false)
-    $('.nav-about').css('background-color', l2_color);
+    $('.sty-about').css('background-color', l2_color);
     $('.section-homepage').css('display', 'none');
     $('.section-about').css('display', 'block');
     $('.section-services').css('display', 'none');
@@ -56,7 +56,7 @@ $('.nav-about').on( "click", function() {
 $('.nav-services').on( "click", function() {
     light_theme();
     // home_replace(false)
-    $('.nav-services').css('background-color', l3_color);
+    $('.sty-services').css('background-color', l3_color);
     $('.section-homepage').css('display', 'none');
     $('.section-about').css('display', 'none');
     $('.section-services').css('display', 'block');
