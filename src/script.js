@@ -11,6 +11,7 @@ const l5_color = '#D18FB2';
 const nav_sty_tags = '.sty-home, .sty-about, .sty-services, .sty-portfolio, .sty-contact'
 const nav_sectiom_tags = '.section-homepage, .section-about, .section-services, .section-contact'
 
+/* ================= THEMES ================ */
 function dark_theme() {
     $('body').css('background-color', dark_color);
     $('body').css('color', white_color);
@@ -28,6 +29,7 @@ function light_theme() {
     $('.footer').css('background-color', dark_color_alt);
 }
 
+/* ================= WEBSITE LINKING ================ */
 $('.nav-home, .company-logo').on( "click", function() {
     dark_theme();
     // home_replace(true)

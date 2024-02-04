@@ -28,6 +28,7 @@ $('form').submit(function (e) {
     //  Budget : entry.1779864861
     // Message : entry.277011542
 
+    console.log('TEST'+ 123);
     $.ajax({
         url: "https://docs.google.com/forms/d/e/1FAIpQLSd_Ys-Xczvvd4JiKtLZ18-PpOdWzoIhnqZ5PY3ezL8KI7288A/formResponse?",
         data: {"entry.1604566445": _name, "entry.1210519929": _email, "entry.1196420835": _service, "entry.1779864861": _budget, "entry.277011542": _msg},
@@ -35,9 +36,23 @@ $('form').submit(function (e) {
         dataType: "xml",
         success: function(d){},
         error: function(x, y, z){
-            $('#success-msg').show();
-            $('#form').hide();
+            show('.contact-popup');
+            readonly(['#nameField', '#emailField', '#budgetField', '#messageField']);
+            hide('#contact-submit')
         }
     });
     return false;
 })
+
+/* ================= CONTACT POPUP ================ */
+var show = function(id) {
+	$(id).css('display', 'block');
+}
+var hide = function(id) {
+	$(id).css('display', 'none');
+}
+var readonly = function(ids) {
+    ids.forEach(id => {
+        $(id).attr('readonly', true);
+    });
+}

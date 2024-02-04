@@ -453,19 +453,118 @@ span.home-slogan {
 
 form button {
 	background-color: var(--l1-color);
-	border-radius: 2px solid var(--l1-color);
 	border-radius: 4px;
 	color: #fff;
 	display: block;
 	font-family: inherit;
 	font-size: 16px;
-	margin-left: 14px;
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: 20px;
-	width: 100%;
+  padding: 10px;
+	width: 6em;
+  cursor: pointer;
+}
+
+#messageField {
+  width: 101.5%;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(
+                120deg,
+                var(--l1-color) 0%,
+                var(--l2-color) 25%,
+                var(--l3-color) 50%,
+                var(--l4-color) 75%,
+                var(--l5-color) 100%
+              )  border-box;
+  border: 1px solid transparent;
+  border-image:  1;
+}
+
+.custom-select {
+  width: 102.2%;
+  min-height: 2em;
+  padding: 8px;
+  border: 0px;
+  border-radius: 2px;
+  color: var(--dark-color-alt);
+  background-color: var(--white-color-alt);
+}
+
+/* --- Message Sended --- */
+.contact-popup {
+  display: none;
+  position: fixed;
+  padding: 10px;
+  width: 280px;
+  left: 50%;
+  margin-left: -150px;
+  height: 180px;
+  top: 50%;
+  margin-top: -100px;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(
+                120deg,
+                var(--l1-color) 0%,
+                var(--l2-color) 25%,
+                var(--l3-color) 50%,
+                var(--l4-color) 75%,
+                var(--l5-color) 100%
+              )  border-box;
+  border: 4px solid transparent;
+  border-image:  1;
+  border-radius: 8px;
+  z-index: 20;
+  text-align: center;
+}
+
+#contact-popup:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  border-radius: 8px;
+  z-index: -2;
+}
+
+#contact-popup:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #FFF;
+  border-radius: 8px;
+  z-index: -1;
 }
 
 
+.contact-popup .social-links a {
+	color: var(--dark-color);
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	margin: 0 10px 10px 0;
+	transition: all 0.5s ease;
+}
 
+.contact-popup .social-links a:hover {
+	color: var(--l3-color);
+}
+
+
+.contact-popup-close {
+  font-size: 1.5em;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
 
 /* ================= JUMBIE FOOTER ================ */
 .footer {
