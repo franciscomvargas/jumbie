@@ -20,6 +20,11 @@
   --l4-color: #D6D991;
   --l5-color: #D18FB2;
 }
+* {
+  margin: 0; 
+  padding: 0;
+  /* box-sizing: border-box; */
+}
 
 /* -- BODY -- */
 body {
@@ -27,9 +32,22 @@ body {
   padding: 0;
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
-  background-color: var(--dark-color);
+  background-color: var(--dark-color); 
   color: var(--white-color);
 }
+
+.main-row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="main-col-"] {
+  float: left;
+  padding: 15px;
+}
+
+.main-col-2 {width: 500px; min-width: 430px;}
 
 /* ================= HEADER BAR ================ */
 header {
@@ -114,8 +132,6 @@ header {
   display: none !important;
 }
 
-
-
 /* ================= ASSETS ================ */
 .action-button {
   font-size: 14px;
@@ -143,11 +159,10 @@ header {
   text-align: left;
 }
 
-
 .section_line{
   margin-left: auto;
   margin-right: auto;
-  margin-top: -1.2em;
+  margin-top: -0.4em;
   height: 0.2em;
   border-radius: 0.1em;
   background: linear-gradient(
@@ -164,23 +179,14 @@ header {
 /* ================= HOMEPAGE CONTENT ================ */
 .section-homepage{ 
   display: block;
-}
-
-table.center{
-  table-layout: fixed;
-  margin-top: 2em;
-  min-width: 1600px;
+	max-width: 1160px;
   margin-left: auto;
   margin-right: auto;
 }
-td.home_left{
-  width: 50%;
-  text-align: left;
-  padding-left: 2em;
-}
-td{
-  border: none;
-  /* border: 1px solid white; */
+
+.home_left {
+  margin-top: 7em;
+  padding: 50px
 }
 
 img.home-logo {
@@ -251,6 +257,7 @@ img.home-logo {
 span.home-slogan {
   padding-left: 0.2em;
   font-size: 1.5rem;
+  min-width: 800px;
 }
 
 .search-bar::before {
@@ -568,24 +575,29 @@ form button {
 
 /* ================= JUMBIE FOOTER ================ */
 .footer {
-  margin-top: 100px;
 	background-color: var(--dark-color);
+  margin: 0; max-width: 100%;
+  margin-top: 50px;
+  padding: 8px;
 }
 
 .footer .container_footer {
-	max-width: 1200px;
-	margin: auto;
+  margin-top: 30px;
+	 max-width: 1200px ; 
+	/* margin: auto; */
   padding-left: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
+/* 
 .footer .row {
 	display: flex;
 	flex-wrap: wrap;
-}
+} */
 
 .footer ul {
 	list-style: none;
-  margin-left: -40px;
+  margin-left: -2em;
 }
 
 .footer-col {
