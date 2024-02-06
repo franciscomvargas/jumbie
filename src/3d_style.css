@@ -1,10 +1,22 @@
-.container {
+.container-3d {
   width: 430px;
   padding: 30px;
   height: 430px;
-  /* margin-left: 20em; */
-  margin: auto
+  margin-left: 6em;
+  /* margin: auto */
 }
+
+@media screen and (min-width: 1330px) {
+	.container-3d {
+    display: block;
+  }
+}
+@media screen and (max-width: 1329px) {
+	.container-3d {
+    display: none;
+  }
+}
+
 /* PEN */
 .con {
   margin: 0 auto;
