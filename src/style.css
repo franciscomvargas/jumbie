@@ -55,12 +55,17 @@ header {
   align-items: center;
   justify-content: space-between;
   background-color: inherit;
-  padding: 1rem 6rem;
+  height: 4rem;
+  padding-top: 1em;
 }
 .company-logo {
-  visibility: hidden;
-  margin-top: -1rem;
-  height: 2rem;
+  /* visibility: hidden;  */
+  margin-top: -2.3rem;
+  margin-left: 2em;
+  height: 0.6em;
+}
+.company-logo img{
+  height: 2em;
 }
 .company-logo:hover {
   cursor: pointer;
@@ -163,7 +168,7 @@ header {
   margin-left: auto;
   margin-right: auto;
   margin-top: -0.4em;
-  height: 0.2em;
+  height: 0.15em;
   border-radius: 0.1em;
   background: linear-gradient(
     120deg,
@@ -185,7 +190,7 @@ header {
 }
 
 .home_left {
-  margin-top: 7em;
+  margin-top: 3em;
   padding: 50px
 }
 
@@ -198,7 +203,7 @@ img.home-logo {
   height: 0.3em;
   border-radius: 0.15em;
   position: absolute;
-  top: 20.5em;
+  top: 15.3em;
   margin-left:0em;
   background: linear-gradient(
     120deg,
@@ -291,44 +296,31 @@ span.home-slogan {
 .section-about{ display: none; }
 /* About */
 .section-about h1{
-  text-align: center;
-}
-
-.section_line.about { width: 14em; }
-.section_line.values { width: 12em; }
-
-.about_div {
-  width: 100%;
-}
-.about_table {
   margin-top: 1em;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
 }
-.about_table td {
-  padding-left: 5em;
-  padding-right: 5em;
-  width: 20em;
-}
+
+.section_line.about { width: 16.5em; }
+.section_line.values { width: 14em; }
 
 /* Core Values */
 .values_title {
   margin-top: 2em;
 }
-.values-table {
-  max-width:1300px;
-  margin:0;
-  padding:0;
-  font-size:0px;
-  margin-left: auto;
-  margin-right: auto;
+
+.company-about {
+  padding:1em;
+  max-width:350px;
+  min-width:300px;
 }
-.values-div {
+
+.company-values {
   display:inline-block;
   background-color:#f3f3f3;
   max-width:500px;
+  min-width:300px;
   border-radius:20px;
+  padding:1em;
   margin:10px;
   -webkit-box-shadow: -3px 3px 6px -3px rgba(0,0,0,0.6);
   -moz-box-shadow: -3px 3px 6px -3px rgba(0,0,0,0.6);
@@ -384,8 +376,10 @@ span.home-slogan {
   display: none;
   text-align: center;
 }
-.section_line.contact { width: 8em; }
-
+.section-contact h1 {
+  margin-top: 1em;
+}
+.section_line.contact { width: 9em; }
 
  form {
   max-width: 1200px;
@@ -399,6 +393,7 @@ span.home-slogan {
 	margin-bottom: 10px;
 	padding-bottom: 20px;
 	position: relative;
+  border: none;
 }
 
 .form-control label {
@@ -460,7 +455,8 @@ span.home-slogan {
 
 form button {
 	background-color: var(--l1-color);
-	border-radius: 4px;
+	border: 0px;
+	border-radius: 8px;
 	color: #fff;
 	display: block;
 	font-family: inherit;
@@ -474,7 +470,7 @@ form button {
 }
 
 #messageField {
-  width: 101.5%;
+  width: 100%;
   background: linear-gradient(white, white) padding-box,
               linear-gradient(
                 120deg,
@@ -489,7 +485,7 @@ form button {
 }
 
 .custom-select {
-  width: 102.2%;
+  width: 100%;
   min-height: 2em;
   padding: 8px;
   border: 0px;
