@@ -407,7 +407,7 @@ span.home-slogan {
   /* font-family: 'Open Sans', sans-serif; */
   font-size: 16px;
   margin: 10px;
-  max-width: 315px;
+  /* max-width: 315px; */
   min-width: 230px;
   overflow: hidden;
   position: relative;
