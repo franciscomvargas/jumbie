@@ -9,7 +9,7 @@ const l4_color = '#D6D991';
 const l5_color = '#D18FB2';
 
 const nav_sty_tags = '.sty-home, .sty-about, .sty-services, .sty-portfolio, .sty-contact'
-const nav_sectiom_tags = '.section-homepage, .section-about, .section-services, .section-contact'
+const nav_sectiom_tags = '.section-homepage, .section-about, .section-services, .section-portfolio, .section-contact'
 
 /* ================= THEMES ================ */
 function dark_theme() {
@@ -55,6 +55,15 @@ $('.nav-services').on( "click", function() {
     $(nav_sectiom_tags).css('display', 'none');
     $('.section-services').css('display', 'block');
     document.title = 'Jumbie ~ Services';
+})
+
+$('.nav-portfolio').on( "click", function() {
+    light_theme();
+    // home_replace(false)
+    $('.sty-portfolio').css('background-color', l3_color);
+    $(nav_sectiom_tags).css('display', 'none');
+    $('.section-portfolio').css('display', 'block');
+    document.title = 'Jumbie ~ Portfolio';
 })
 
 $('.nav-contact, .action-contact').on( "click", function() {
