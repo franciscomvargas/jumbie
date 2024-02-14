@@ -182,11 +182,12 @@ header {
 
 .jumbie-container {
   display:inline-block;
-  max-width:300px;
+  /* max-width:300px; */
   min-width:300px;
   border-radius:20px;
   padding:1em;
-  margin:10px;
+  margin:24px;
+  margin-left: 0px;
   -webkit-box-shadow: -3px 3px 6px -3px rgba(0,0,0,0.6);
   -moz-box-shadow: -3px 3px 6px -3px rgba(0,0,0,0.6);
   box-shadow: -3px 3px 6px -3px rgba(0,0,0,0.6);
@@ -304,7 +305,10 @@ span.home-slogan {
 
 
 /* ================= ABOUT CONTENT ================ */
-.section-about{ display: none; }
+.section-about{ 
+  display: none;
+  min-height: 21.3em;
+}
 /* About */
 .section-about h1{
   margin-top: 1em;
@@ -353,9 +357,11 @@ span.home-slogan {
 /* ================= SERVICES CONTENT ================ */
 .section-services { 
   display: none;
+  min-height: 21.3em;
 }
 .section-services h1{
   text-align: center;
+  margin-top: 1em;
 }
 .section_line.services { 
   width: 9em; 
@@ -363,9 +369,9 @@ span.home-slogan {
 }
 
 .topcenter_icon {
-  position: absolute;
   display: block;
-  margin-left: 104px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: -45px;
 }
 
@@ -384,9 +390,11 @@ span.home-slogan {
 /* ================= PORTFOLIO CONTENT ================ */
 .section-portfolio { 
   display: none;
+  min-height: 21.3em;
 }
 .section-portfolio h1{
   text-align: center;
+  margin-top: 1em;
 }
 .section_line.portfolio { 
   width: 10em; 
@@ -509,6 +517,7 @@ span.home-slogan {
 .section-contact{ 
   display: none;
   text-align: center;
+  min-height: 21.3em;
 }
 .section-contact h1 {
   margin-top: 1em;
@@ -605,6 +614,7 @@ form button {
 
 #messageField {
   width: 100%;
+  min-height: 10em;
   background: linear-gradient(white, white) padding-box,
               linear-gradient(
                 120deg,
