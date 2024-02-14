@@ -60,7 +60,7 @@ $('.nav-services').on( "click", function() {
 $('.nav-portfolio').on( "click", function() {
     light_theme();
     // home_replace(false)
-    $('.sty-portfolio').css('background-color', l3_color);
+    $('.sty-portfolio').css('background-color', l4_color);
     $(nav_sectiom_tags).css('display', 'none');
     $('.section-portfolio').css('display', 'block');
     document.title = 'Jumbie ~ Portfolio';
