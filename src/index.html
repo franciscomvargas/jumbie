@@ -5,26 +5,32 @@
     <title>Jumbie</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./navbar.css">
     <link rel="stylesheet" href="./3d_style.css">
     <link rel="icon" type="image/x-icon" href="assets/icon.svg">
 </head>
 <body>
-    <header>
-        <div class="company-logo search-bar"><img src="assets/icon.svg" alt="Jumbie Icon"></div>
-        <nav class="navbar">
-            <ul class="nav-items">
-                <span class="nav-link nav-home sty-home"><strong>Home</strong></span>
-                <span class="nav-link nav-about sty-about"><strong>About</strong></span>
-                <span class="nav-link nav-services sty-services"><strong>Services</strong></span>
-                <span class="nav-link nav-portfolio sty-portfolio"><strong>Portfolio</strong></span>
-                <span class="nav-link nav-contact sty-contact"><strong>Contact</strong></span>
-            </ul>
-        </nav>
-        <div class="menu-toggle">
-            <i class="bx bx-menu"></i>
-            <i class="bx bx-x"></i>
+    <nav class="nav">
+        <div class="container" style="max-width: 100%;">
+            <div class="logo search-bar">
+                <img src="assets/icon.svg" alt="Jumbie Icon">
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><span class="nav-home sty-home">Home</span></li>
+                    <li><span class="nav-about sty-about">About</span></li>
+                    <li><span class="nav-services sty-services">Services</span></li>
+                    <li><span class="nav-portfolio sty-portfolio">Portfolio</span></li>
+                    <li><span class="nav-contact sty-contact">Contact</span></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
         </div>
-    </header>
+    </nav>
     
     <div class="body">
         <div class="section-homepage">
@@ -308,7 +314,7 @@
         <div class="section-portfolio">
             <h1>Portfolio</h1>
             <div class="section_line portfolio"></div><br>
-            <div class="container">
+            <div class="container portfolio-container">
                 <div class="row">
                     <div class="col">
                         <figure class="snip1573">

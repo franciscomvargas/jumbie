@@ -34,8 +34,11 @@ body {
   font-size: 1rem;
   background-color: var(--dark-color); 
   color: var(--white-color);
+  background-color: #111;
 }
-
+.body {
+  margin-top: 4em;
+}
 .main-row::after {
   content: "";
   clear: both;
@@ -90,9 +93,6 @@ header {
   background-color: var(--white-color);
 }
 
-.nav-home{
-  background-color: var(--l1-color);
-}
 
 .nav-link:hover {
   cursor: pointer;
@@ -154,14 +154,12 @@ header {
   cursor: pointer;
 }
 .action-text {
-  width: 66px;
   color: #fff;
   position: relative;
   top: 12px;
   font-weight: Medium;
   font-size: 24px;
   opacity: 1;
-  text-align: left;
 }
 
 .section_line{
@@ -178,6 +176,33 @@ header {
     var(--l4-color) 75%,
     var(--l5-color) 100%
   );
+}
+
+
+.search-bar::before {
+  content: "";
+  background: linear-gradient(
+    120deg,
+    var(--l1-color) 0%,
+    var(--l2-color) 25%,
+    var(--l3-color) 50%,
+    var(--l4-color) 75%,
+    var(--l5-color) 100%
+  );
+  width: 100%;
+  height: 0.3em;
+  border-radius: 0.15em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 150ms;
+}
+
+.search-bar:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .jumbie-container {
@@ -277,37 +302,12 @@ span.home-slogan {
   min-width: 800px;
 }
 
-.search-bar::before {
-  content: "";
-  background: linear-gradient(
-    120deg,
-    var(--l1-color) 0%,
-    var(--l2-color) 25%,
-    var(--l3-color) 50%,
-    var(--l4-color) 75%,
-    var(--l5-color) 100%
-  );
-  width: 100%;
-  height: 0.3em;
-  border-radius: 0.15em;
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 150ms;
-}
-
-.search-bar:hover::before {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
 
 /* ================= ABOUT CONTENT ================ */
 .section-about{ 
   display: none;
   min-height: 21.3em;
+  margin-top: 6em;
 }
 /* About */
 .section-about h1{
@@ -358,6 +358,7 @@ span.home-slogan {
 .section-services { 
   display: none;
   min-height: 21.3em;
+  margin-top: 6em;
 }
 .section-services h1{
   text-align: center;
@@ -391,6 +392,7 @@ span.home-slogan {
 .section-portfolio { 
   display: none;
   min-height: 21.3em;
+  margin-top: 6em;
 }
 .section-portfolio h1{
   text-align: center;
@@ -518,6 +520,7 @@ span.home-slogan {
   display: none;
   text-align: center;
   min-height: 21.3em;
+  margin-top: 6em;
 }
 .section-contact h1 {
   margin-top: 1em;
@@ -715,8 +718,9 @@ form button {
 
 /* ================= JUMBIE FOOTER ================ */
 .footer {
-	background-color: var(--dark-color);
-  margin: 0; max-width: 100%;
+	background-color: inherit;
+  margin: 0;
+  max-width: 100%;
   margin-top: 50px;
   padding: 8px;
 }
