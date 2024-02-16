@@ -19,6 +19,9 @@
   --l3-color: #9FD98F;
   --l4-color: #D6D991;
   --l5-color: #D18FB2;
+
+  /* configs */
+  --body-margin-top: 4em
 }
 * {
   margin: 0; 
@@ -37,7 +40,7 @@ body {
   background-color: #111;
 }
 .body {
-  margin-top: 4em;
+  /* margin-top: -3em; */
 }
 .main-row::after {
   content: "";
@@ -61,16 +64,7 @@ header {
   height: 4rem;
   padding-top: 1em;
 }
-.company-logo {
-  /* visibility: hidden;  */
-  margin-top: -2.3rem;
-  margin-left: 2em;
-  height: 0.6em;
-}
-.company-logo img{
-  height: 2em;
-}
-.company-logo:hover {
+.logo {
   cursor: pointer;
 }
 .nav-items {
@@ -224,6 +218,7 @@ header {
 	max-width: 1160px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: var(--body-margin-top);
 }
 
 .home_left {
@@ -307,7 +302,7 @@ span.home-slogan {
 .section-about{ 
   display: none;
   min-height: 21.3em;
-  margin-top: 6em;
+  padding-top: var(--body-margin-top);
 }
 /* About */
 .section-about h1{
@@ -358,7 +353,7 @@ span.home-slogan {
 .section-services { 
   display: none;
   min-height: 21.3em;
-  margin-top: 6em;
+  padding-top: var(--body-margin-top);
 }
 .section-services h1{
   text-align: center;
@@ -392,7 +387,7 @@ span.home-slogan {
 .section-portfolio { 
   display: none;
   min-height: 21.3em;
-  margin-top: 6em;
+  padding-top: var(--body-margin-top);
 }
 .section-portfolio h1{
   text-align: center;
@@ -520,7 +515,7 @@ span.home-slogan {
   display: none;
   text-align: center;
   min-height: 21.3em;
-  margin-top: 6em;
+  padding-top: var(--body-margin-top);
 }
 .section-contact h1 {
   margin-top: 1em;

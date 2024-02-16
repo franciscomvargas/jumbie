@@ -35,20 +35,20 @@ function light_theme() {
 
 /* ================= NAVBAR TRIGGER ================ */
 function hide_dropdown_nav(from_trigger=false) {
-    if(from_trigger || $('.navTrigger').hasClass('active')){
+    if($('.navTrigger').css('display') === 'block'){
         $('.navTrigger').toggleClass('active');
+        if($('.navTrigger').hasClass('active')){
+            console.log("NavBar Exists!!")
+            $(nav_trigger_hide_tags).css('display', 'none');
+            $('.main_list').css('overflow', 'visible');
+        } else {
+            console.log("NavBar ! Exists!!")
+            $(nav_trigger_hide_tags).css('display', 'block');
+            $('.main_list').css('overflow', 'hidden')
+        }
+        $("#mainListDiv").toggleClass("show_list");
+        $("#mainListDiv").fadeIn();
     }
-    if($('.navTrigger').hasClass('active')){
-        console.log("NavBar Exists!!")
-        $(nav_trigger_hide_tags).css('display', 'none');
-        $('.main_list').css('overflow', 'visible');
-    } else {
-        console.log("NavBar ! Exists!!")
-        $(nav_trigger_hide_tags).css('display', 'block');
-        $('.main_list').css('overflow', 'hidden')
-    }
-    $("#mainListDiv").toggleClass("show_list");
-    $("#mainListDiv").fadeIn();
 }
 
 $('.navTrigger').click(function () {
@@ -56,7 +56,7 @@ $('.navTrigger').click(function () {
 });
 
 /* ================= WEBSITE LINKING ================ */
-$('.nav-home, .company-logo').on( "click", function() {
+$('.nav-home').on( "click", function() {
     dark_theme();
     // home_replace(true)
     $('.sty-home').css('background-color', l1_color);
@@ -64,6 +64,14 @@ $('.nav-home, .company-logo').on( "click", function() {
     $('.section-homepage').css('display', 'block');
     document.title = 'Jumbie';
     hide_dropdown_nav();
+})
+$('.logo').on( "click", function() {
+    dark_theme();
+    // home_replace(true)
+    $('.sty-home').css('background-color', l1_color);
+    $(nav_sectiom_tags).css('display', 'none');
+    $('.section-homepage').css('display', 'block');
+    document.title = 'Jumbie';
 })
 
 $('.nav-about').on( "click", function() {
