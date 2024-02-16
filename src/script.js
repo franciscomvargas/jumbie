@@ -34,8 +34,10 @@ function light_theme() {
 }
 
 /* ================= NAVBAR TRIGGER ================ */
-function hide_dropdown_nav(from_link=false) {
-    $('.navTrigger').toggleClass('active');
+function hide_dropdown_nav(from_trigger=false) {
+    if(from_trigger || $('.navTrigger').hasClass('active')){
+        $('.navTrigger').toggleClass('active');
+    }
     if($('.navTrigger').hasClass('active')){
         console.log("NavBar Exists!!")
         $(nav_trigger_hide_tags).css('display', 'none');
@@ -50,7 +52,7 @@ function hide_dropdown_nav(from_link=false) {
 }
 
 $('.navTrigger').click(function () {
-    hide_dropdown_nav();
+    hide_dropdown_nav(from_trigger=true);
 });
 
 /* ================= WEBSITE LINKING ================ */
