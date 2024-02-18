@@ -12,7 +12,6 @@ const l5_color = '#D18FB2';
 
 const nav_sty_tags = '.sty-home, .sty-about, .sty-services, .sty-portfolio, .sty-contact'
 const nav_sectiom_tags = '.section-homepage, .section-about, .section-services, .section-portfolio, .section-contact'
-const nav_trigger_hide_tags = '.footer, .logo, .logo_line, .action-text, form, .portfolio-container'
 
 $( document ).ready(function() {
     $('.sty-home').css('background-color', l1_color); // todo > OnLoad!!
@@ -39,11 +38,9 @@ function hide_dropdown_nav(from_trigger=false) {
         $('.navTrigger').toggleClass('active');
         if($('.navTrigger').hasClass('active')){
             console.log("NavBar Exists!!")
-            $(nav_trigger_hide_tags).css('display', 'none');
             $('.main_list').css('overflow', 'visible');
         } else {
             console.log("NavBar ! Exists!!")
-            $(nav_trigger_hide_tags).css('display', 'block');
             $('.main_list').css('overflow', 'hidden')
         }
         $("#mainListDiv").toggleClass("show_list");
@@ -51,14 +48,11 @@ function hide_dropdown_nav(from_trigger=false) {
     }
 }
 
-$('.navTrigger').click(function () {
+$('.navTrigger, .navlinks').click(function () {
     hide_dropdown_nav(from_trigger=true);
 });
 
 /* ================= WEBSITE LINKING ================ */
-$('.navlinks').on( "click", function() {
-    hide_dropdown_nav();
-})
 $('.nav-home, .logo').on( "click", function() {
     dark_theme();
     // home_replace(true)

@@ -156,6 +156,10 @@ header {
 .logo {
   cursor: pointer;
 }
+.nav{
+  position: fixed;
+  z-index: 2;
+}
 .nav-items {
   display: flex;
   margin-right: 1.5rem;
