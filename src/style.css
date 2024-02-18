@@ -744,7 +744,7 @@ form button {
 }
 
 .footer-col {
-	width: 25%;
+  min-width: 150px;
 }
 
 .footer-col h4 {
