@@ -56,16 +56,10 @@ $('.navTrigger').click(function () {
 });
 
 /* ================= WEBSITE LINKING ================ */
-$('.nav-home').on( "click", function() {
-    dark_theme();
-    // home_replace(true)
-    $('.sty-home').css('background-color', l1_color);
-    $(nav_sectiom_tags).css('display', 'none');
-    $('.section-homepage').css('display', 'block');
-    document.title = 'Jumbie';
+$('.navlinks').on( "click", function() {
     hide_dropdown_nav();
 })
-$('.logo').on( "click", function() {
+$('.nav-home, .logo').on( "click", function() {
     dark_theme();
     // home_replace(true)
     $('.sty-home').css('background-color', l1_color);
@@ -81,7 +75,6 @@ $('.nav-about').on( "click", function() {
     $(nav_sectiom_tags).css('display', 'none');
     $('.section-about').css('display', 'block');
     document.title = 'Jumbie ~ About';
-    hide_dropdown_nav();
 })
 
 $('.nav-services').on( "click", function() {
@@ -91,7 +84,6 @@ $('.nav-services').on( "click", function() {
     $(nav_sectiom_tags).css('display', 'none');
     $('.section-services').css('display', 'block');
     document.title = 'Jumbie ~ Services';
-    hide_dropdown_nav();
 })
 
 $('.nav-portfolio').on( "click", function() {
@@ -101,19 +93,9 @@ $('.nav-portfolio').on( "click", function() {
     $(nav_sectiom_tags).css('display', 'none');
     $('.section-portfolio').css('display', 'block');
     document.title = 'Jumbie ~ Portfolio';
-    hide_dropdown_nav();
 })
 
-$('.nav-contact').on( "click", function() {
-    light_theme();
-    // home_replace(false)
-    $('.sty-contact').css('background-color', l5_color);
-    $(nav_sectiom_tags).css('display', 'none');
-    $('.section-contact').css('display', 'block');
-    document.title = 'Jumbie ~ Contact';
-    hide_dropdown_nav();
-})
-$('.action-contact').on( "click", function() {
+$('.nav-contact, .action-contact').on( "click", function() {
     light_theme();
     // home_replace(false)
     $('.sty-contact').css('background-color', l5_color);
@@ -121,4 +103,3 @@ $('.action-contact').on( "click", function() {
     $('.section-contact').css('display', 'block');
     document.title = 'Jumbie ~ Contact';
 })
-
