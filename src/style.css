@@ -420,6 +420,7 @@ span.home-slogan {
   text-align: center;
   width: 100%;
   border-radius: 20px;
+  z-index: 1;
 }
 
 .snip1573 * {
