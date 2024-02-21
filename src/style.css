@@ -310,6 +310,23 @@ span.home-slogan {
 }
 
 
+@media(max-width: 430px) {
+  img.home-logo {
+    width: 15em;
+  }
+  .logo_line{
+    width: 15em;
+    height: 0.26em;
+    border-radius: 0.13em;
+    top: 14.1em;
+    margin-left:0em;
+  }
+  span.home-slogan {
+    font-size: 1.3rem;
+  }
+}
+
+
 /* ================= ABOUT CONTENT ================ */
 .section-about{ 
   display: none;
