@@ -153,8 +153,9 @@ header {
   height: 4rem;
   padding-top: 1em;
 }
-.logo {
+.nav div.logo img {
   cursor: pointer;
+  margin-left: -1.5em;
 }
 .nav{
   position: fixed;
