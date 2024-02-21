@@ -22,12 +22,16 @@ let urlQuery = new URLSearchParams(window.location.search);
 urlQuery = String(urlQuery).split('&');
 // console.log("[ URL QUERY ] > " + urlQuery);
 let website_queries = {};
-urlQuery.forEach(element => {
-    _query = String(element).split('=');
-    // console.log("[ QUERY ] > " + _query);
-    website_queries[_query[0].toLowerCase()] = _query[1].toLowerCase();
-});
-console.log("[ QUERY OBJ ] > " + JSON.stringify(website_queries, null, 4));
+try {
+    urlQuery.forEach(element => {
+        _query = String(element).split('=');
+        // console.log("[ QUERY ] > " + _query);
+        website_queries[_query[0].toLowerCase()] = _query[1].toLowerCase();
+    });
+    console.log("[ QUERY OBJ ] > " + JSON.stringify(website_queries, null, 4));
+} catch (error) {
+  console.log(error);
+}
 
 // Handle Section Query
 if (website_queries.hasOwnProperty('section')) {
