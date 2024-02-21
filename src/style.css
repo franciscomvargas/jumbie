@@ -336,10 +336,11 @@ span.home-slogan {
 .section-about h1{
   margin-top: 1em;
   text-align: center;
+  font-size: 2em;
 }
 
-.section_line.about { width: 16.5em; }
-.section_line.values { width: 14em; }
+.section_line.about { width: 13em; }
+.section_line.values { width: 11em; }
 
 /* Core Values */
 .values_title {
@@ -386,9 +387,10 @@ span.home-slogan {
 .section-services h1{
   text-align: center;
   margin-top: 1em;
+  font-size: 2em;
 }
 .section_line.services { 
-  width: 9em; 
+  width: 8em; 
   margin-bottom: 40px;
 }
 
@@ -419,9 +421,10 @@ span.home-slogan {
 .section-portfolio h1{
   text-align: center;
   margin-top: 1em;
+  font-size: 2em;
 }
 .section_line.portfolio { 
-  width: 10em; 
+  width: 8em; 
   margin-bottom: 40px;
 }
 
@@ -546,8 +549,9 @@ span.home-slogan {
 }
 .section-contact h1 {
   margin-top: 1em;
+  font-size: 2em;
 }
-.section_line.contact { width: 9em; }
+.section_line.contact { width: 7.5em; }
 
 form {
   max-width: 1200px;
@@ -671,7 +675,7 @@ form button {
   width: 280px;
   left: 50%;
   margin-left: -150px;
-  height: 180px;
+  height: 215px;
   top: 50%;
   margin-top: -100px;
   background: linear-gradient(white, white) padding-box,
@@ -691,7 +695,7 @@ form button {
 }
 
 #contact-popup:after {
-  position: fixed;
+  position: fixed;  
   content: "";
   top: 0;
   left: 0;
