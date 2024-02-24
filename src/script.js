@@ -88,6 +88,15 @@ $('.navTrigger, .navlinks').click(function () {
     hide_dropdown_nav(from_trigger=true);
 });
 
+/* ================= WEBSITE LANGUAGE ================ */
+$('.lang-en').on( "click", function() {
+    window.location.replace("http://jumbie.netlify.app/index_pt.html/");
+})
+$('.lang-pt').on( "click", function() {
+    window.location.replace("http://jumbie.netlify.app/");
+})
+
+
 /* ================= WEBSITE LINKING ================ */
 $('.nav-home, .logo').on( "click", function() {
     show_home_section();

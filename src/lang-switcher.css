@@ -1,0 +1,44 @@
+.lang-switcher {
+  cursor: pointer;
+  margin: 0 auto;
+  position: relative;
+  height: 194px;
+  width: 100px;
+}
+.lang-switcher:before, .lang-switcher:after {
+  color: black;
+  cursor: pointer;
+  display: block;
+  font-size: 28px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  position: absolute;
+  width: 100px;
+  z-index: 1;
+}
+.lang-switcher:before {
+  content: attr(data-lang-1);
+}
+.lang-switcher:after {
+  content: attr(data-lang-2);
+  opacity: 0;
+  transition: opacity 0.2s linear 0.7s;
+  top: 94px;
+}
+.lang-switcher:hover:after {
+  color: gray;
+  opacity: 1;
+}
+.lang-switcher__svg-item {
+  cursor: pointer;
+  fill: #fff;
+  transition: transform 1s ease-out;
+}
+.lang-switcher:hover .lang-switcher__svg-item.js-moving, .lang-switcher:hover:focus .lang-switcher__svg-item.js-moving {
+  transform: translateY(94px);
+}
+
+.lang-switcher__svg-item {
+  z-index: 9999;
+}

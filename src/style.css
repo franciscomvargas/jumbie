@@ -91,7 +91,7 @@ body {
 .section_line{
   margin-left: auto;
   margin-right: auto;
-  margin-top: -0.4em;
+  margin-top: -1.2em;
   height: 0.15em;
   border-radius: 0.1em;
   background: linear-gradient(
@@ -427,7 +427,7 @@ span.home-slogan {
 .section_line.portfolio { 
   width: 8em; 
   margin-bottom: 40px;
-};
+}
 .section_line.portfolio_pt { 
   width: 9em; 
   margin-bottom: 40px;
@@ -557,6 +557,7 @@ span.home-slogan {
   font-size: 2em;
 }
 .section_line.contact { width: 7.5em; }
+.section_line.contact_pt { width: 9em; }
 
 form {
   max-width: 1200px;
