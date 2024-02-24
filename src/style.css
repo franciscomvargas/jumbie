@@ -341,6 +341,7 @@ span.home-slogan {
 
 .section_line.about { width: 13em; }
 .section_line.values { width: 11em; }
+.section_line.values_pt { width: 20.5em; }
 
 /* Core Values */
 .values_title {
@@ -425,6 +426,10 @@ span.home-slogan {
 }
 .section_line.portfolio { 
   width: 8em; 
+  margin-bottom: 40px;
+};
+.section_line.portfolio_pt { 
+  width: 9em; 
   margin-bottom: 40px;
 }
 
@@ -801,8 +806,11 @@ form button {
 }
 
 .footer-col h4.links::before { width:5em;}
+.footer-col h4.links_pt::before { width:4.75em;}
 .footer-col h4.services::before { width:4.8em;}
+.footer-col h4.services_pt::before { width:4.85em;}
 .footer-col h4.follow::before { width:5.9em;}
+.footer-col h4.follow_pt::before { width:4.88em;}
 
 .footer-col ul li:not(:last-child) {
 	margin-bottom: 10px;
