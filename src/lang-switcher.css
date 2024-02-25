@@ -3,20 +3,19 @@
   margin: 0 auto;
   position: relative;
   height: 160px;
-  width: 80px;
+  width: 50px;
 }
 .lang-switcher:before, .lang-switcher:after {
   color: black;
   cursor: pointer;
   display: block;
-  font-size: 22px;
+  font-size: 16px;
   height: 100px;
   line-height: 100px;
-  /* text-align: center; */
+  text-align: center;
   position: absolute;
-  width: 100px;
+  width: 50px;
   z-index: 1;
-  padding-left: 27.5px;
 }
 .lang-switcher:before {
   content: attr(data-lang-1);
@@ -25,7 +24,7 @@
   content: attr(data-lang-2);
   opacity: 0;
   transition: opacity 0.2s linear 0.7s;
-  top: 76px;
+  top: 47px;
 }
 .lang-switcher:hover:after {
   color: gray;
