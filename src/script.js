@@ -16,6 +16,13 @@ const nav_sectiom_tags = '.section-homepage, .section-about, .section-services, 
 $( document ).ready(function() {
     $('.sty-home').css('background-color', l1_color); // todo > OnLoad!!
 });
+document.addEventListener("DOMContentLoaded", function() {
+  // Get the SVG item
+  var svgItem = document.querySelector('.lang-switcher__svg-item');
+  
+  // Apply the initial transformation
+  svgItem.style.transform = 'translateY(94px)';
+});
 
 /* ================= URL QUERY ================ */
 let urlQuery = new URLSearchParams(window.location.search);
