@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var svgItem = document.querySelector('.lang-switcher__svg-item');
   
   // Apply the initial transformation
-  svgItem.style.transform = 'translateY(94px)';
+  svgItem.style.transform = 'translateX(38px)';
 });
 
 /* ================= URL QUERY ================ */

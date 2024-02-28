@@ -1,88 +1,79 @@
 .lang-switcher {
   cursor: pointer;
   margin: 0 auto;
-  position: relative;
-  height: 160px;
-  width: 50px;
+  position: absolute;
+  top: -15px;
+  right: -80px;
+  height: 194px;
+  width: 194px;
 }
 .lang-switcher:before, .lang-switcher:after {
   color: black;
   cursor: pointer;
   display: block;
-  font-size: 16px;
+  font-size: 14px;
   height: 100px;
   line-height: 100px;
   text-align: center;
   position: absolute;
-  width: 50px;
+  width: 100px;
   z-index: 1;
 }
 .lang-switcher:before {
   content: attr(data-lang-1);
 }
+
 .lang-switcher:after {
   content: attr(data-lang-2);
-  opacity: 0;
-  transition: opacity 0.2s linear 0.7s;
-  top: 47px;
+  top: 0px;
+  left: 35px;
 }
+
 .lang-switcher:hover:after {
   color: gray;
-  opacity: 1;
+}
+  
+.lang-switcher__svg-item {
+  cursor: pointer;
+  fill: #fff;
+  transition: transform 1s ease-out;
+}
+.lang-switcher__svg-item {
+  z-index: 9999;
 }
 
 @media screen and (min-width: 980px) {
+  .lang-switcher {
+    right: -80px;
+  }
   .lang-switcher:after {
-    content: attr(data-lang-2);
     opacity: 0;
     transition: opacity 0.2s linear 0.7s;
-    top: 47px;
   }
   .lang-switcher:hover:after {
-    color: gray;
     opacity: 1;
   }
-  .lang-switcher__svg-item {
-    cursor: pointer;
-    fill: #fff;
-    transition: transform 1s ease-out;
-  }
   .lang-switcher:hover .lang-switcher__svg-item.js-moving, .lang-switcher:hover:focus .lang-switcher__svg-item.js-moving {
-    transform: translateY(94px);
-  }
-
-  .lang-switcher__svg-item {
-    z-index: 9999;
+    transform: translateX(38px);
   }
 }
 
 @media screen and (max-width: 980px) {
+  .lang-switcher {
+    right: 0px;
+  }
   .lang-switcher:before {
-    content: attr(data-lang-1); /* Set content to the first language */
     opacity: 1; /* Make it visible by default */
-    /* top: 0px; */
   }
   .lang-switcher:after {
-    content: attr(data-lang-2); /* Set content to the second language */
     opacity: 1; /* Hide it by default */
-    top: 47px; /* Adjust position */
   }
 
   .lang-switcher:hover:before {
     color: gray; /* Change color on hover */
   }
   .lang-switcher:hover:after {
-    color: gray; /* Change color on hover */
     opacity: 1; /* Make it visible on hover */
-  }
-  
-  .lang-switcher__svg-item {
-    cursor: pointer;
-    fill: #fff;
-    transition: transform 1s ease-out;
-  }
-  .lang-switcher__svg-item {
-    z-index: 9999;
   }
 }
 
