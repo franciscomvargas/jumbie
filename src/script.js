@@ -79,11 +79,11 @@ function hide_dropdown_nav(from_trigger=false) {
         $('.navTrigger').toggleClass('active');
         if($('.navTrigger').hasClass('active')){
             console.log("NavBar Exists!!");
-            $('div.logo').css('display', 'none')
+            $(mob_nav_hide_tags).css('display', 'none')
             $('.main_list').css('overflow', 'visible');
         } else {
             console.log("NavBar ! Exists!!")
-            $('div.logo').css('display', 'block')
+            $(mob_nav_hide_tags).css('display', 'block')
             $('.main_list').css('overflow', 'hidden')
         }
         $("#mainListDiv").toggleClass("show_list");
