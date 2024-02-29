@@ -3,7 +3,9 @@ const dark_color = 'black'
 const dark_color_alt = '#3d3d3d'
 const nav_footer_color = '#111'
 
-const white_color = 'white'
+const white_color = 'white';
+const bckgnd_color = '#FFFFF5';
+const bckgnd_color_alt = '#F4F4F4';
 const l1_color = '#9B91D9';
 const l2_color = '#91A3D9';
 const l3_color = '#9FD98F';
@@ -11,7 +13,8 @@ const l4_color = '#D6D991';
 const l5_color = '#D18FB2';
 
 const nav_sty_tags = '.sty-home, .sty-about, .sty-services, .sty-portfolio, .sty-contact'
-const nav_sectiom_tags = '.section-homepage, .section-about, .section-services, .section-portfolio, .section-contact'
+const nav_section_tags = '.section-homepage, .section-about, .section-services, .section-portfolio, .section-contact'
+const mob_nav_hide_tags = 'div.logo, div.lang-switcher'
 
 $( document ).ready(function() {
     $('.sty-home').css('background-color', l1_color); // todo > OnLoad!!
@@ -21,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var svgItem = document.querySelector('.lang-switcher__svg-item');
   
   // Apply the initial transformation
-  svgItem.style.transform = 'translateX(38px)';
+  svgItem.style.transform = 'translateX(90px)';
 });
 
 /* ================= URL QUERY ================ */
@@ -63,14 +66,14 @@ function dark_theme() {
     $('.body').css('background-color', nav_footer_color);
     $('body').css('color', white_color);
     $('header').css('background-color', dark_color);
-    $(nav_sty_tags).css('background-color', white_color);
+    $(nav_sty_tags).css('background-color', bckgnd_color);
 }
 function light_theme() {
     $('.body').css('background-color', white_color);
     $('body').css('color', dark_color);
     $('header').css('background-color', dark_color);
     
-    $(nav_sty_tags).css('background-color', white_color);
+    $(nav_sty_tags).css('background-color', bckgnd_color);
 }
 
 /* ================= NAVBAR TRIGGER ================ */
@@ -112,7 +115,7 @@ function show_home_section() {
     dark_theme();
     // home_replace(true)
     $('.sty-home').css('background-color', l1_color);
-    $(nav_sectiom_tags).css('display', 'none');
+    $(nav_section_tags).css('display', 'none');
     $('.section-homepage').css('display', 'block');
     document.title = 'Jumbie';
 }
@@ -124,7 +127,7 @@ function show_about_section() {
     light_theme();
     // home_replace(false)
     $('.sty-about').css('background-color', l2_color);
-    $(nav_sectiom_tags).css('display', 'none');
+    $(nav_section_tags).css('display', 'none');
     $('.section-about').css('display', 'block');
     document.title = 'Jumbie ~ About';
 }
@@ -136,7 +139,7 @@ function show_services_section() {
     light_theme();
     // home_replace(false)
     $('.sty-services').css('background-color', l3_color);
-    $(nav_sectiom_tags).css('display', 'none');
+    $(nav_section_tags).css('display', 'none');
     $('.section-services').css('display', 'block');
     document.title = 'Jumbie ~ Services';
 }
@@ -148,7 +151,7 @@ function show_portfolio_section() {
     light_theme();
     // home_replace(false)
     $('.sty-portfolio').css('background-color', l4_color);
-    $(nav_sectiom_tags).css('display', 'none');
+    $(nav_section_tags).css('display', 'none');
     $('.section-portfolio').css('display', 'block');
     document.title = 'Jumbie ~ Portfolio';
 }
@@ -160,7 +163,7 @@ function show_contact_section() {
     light_theme();
     // home_replace(false)
     $('.sty-contact').css('background-color', l5_color);
-    $(nav_sectiom_tags).css('display', 'none');
+    $(nav_section_tags).css('display', 'none');
     $('.section-contact').css('display', 'block');
     document.title = 'Jumbie ~ Contact';
 
