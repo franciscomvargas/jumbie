@@ -12,6 +12,8 @@
   --white-color-alt: hsl(12, 14%, 93%);
   --dark-color: hsl(300, 100%, 0%);
   --dark-color-alt: #3d3d3d;
+  --bckgnd-color: #FFFFF5;
+  --bckgnd-color-alt: #F4F4F4;
 
   /* magic line */
   --l1-color: #9B91D9;
@@ -62,6 +64,7 @@ body {
 .center-container {
   margin-left: auto !important;
   margin-right: auto !important;
+  --bs-gutter-x: 3.5rem;
 }
 
 .action-button {
@@ -69,7 +72,7 @@ body {
   width: 204px;
   height: 54px;
   background: var(--l1-color);
-  color: #fff;
+  color: var(--white-color);
   opacity: 1;
   /* position: absolute;
   top: 0px;
@@ -80,7 +83,7 @@ body {
   cursor: pointer;
 }
 .action-text {
-  color: #fff;
+  color: var(--white-color);
   position: relative;
   top: 12px;
   font-weight: Medium;
@@ -133,6 +136,7 @@ body {
 
 .jumbie-container {
   display:inline-block;
+  background-color: var(--bckgnd-color-alt);
   /* max-width:300px; */
   min-width:300px;
   border-radius:20px;
@@ -175,7 +179,6 @@ header {
     var(--primary-color)
   ); */
   text-decoration: none; 
-  background: var(--white-color);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-color: var(--white-color);
