@@ -64,7 +64,7 @@ body {
 .center-container {
   margin-left: auto !important;
   margin-right: auto !important;
-  --bs-gutter-x: 3.5rem;
+  --bs-gutter-x: 8.8rem;
 }
 
 .action-button {
