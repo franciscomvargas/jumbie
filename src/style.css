@@ -148,6 +148,11 @@ body {
   box-shadow: -3px 3px 6px -3px rgba(0,0,0,0.6); */
 }
 
+.jumbie-container h4 {
+  margin-top: 16px;
+  margin-bottom: 14px;
+}
+
 /* ================= HEADER BAR ================ */
 header {
   display: flex;
@@ -344,7 +349,7 @@ span.home-slogan {
 
 .section_line.about { width: 13em; }
 .section_line.values { width: 11em; }
-.section_line.values_pt { width: 20.5em; }
+.section_line.values_pt { width: 7em; }
 
 /* Core Values */
 .values_title {
