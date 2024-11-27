@@ -16,9 +16,9 @@ const nav_sty_tags = '.sty-home, .sty-about, .sty-services, .sty-portfolio, .sty
 const nav_section_tags = '.section-homepage, .section-about, .section-services, .section-portfolio, .section-contact'
 const mob_nav_hide_tags = 'div.logo, div.lang-switcher'
 
-$( document ).ready(function() {
-    $('.sty-home').css('background-color', l1_color); // todo > OnLoad!!
-});
+// $( document ).ready(function() {
+//     $('.sty-home').css('background-color', l1_color); // todo > OnLoad!!
+// });
 document.addEventListener("DOMContentLoaded", function() {
   // Get the SVG item
   var svgItem = document.querySelector('.lang-switcher__svg-item');
@@ -60,6 +60,9 @@ if (website_queries.hasOwnProperty('section')) {
             break;
     }
 }
+else {
+    $('.sty-home').css('background-color', l1_color); // todo > OnLoad!!
+}
 
 /* ================= THEMES ================ */
 function dark_theme() {
@@ -100,16 +103,16 @@ $('.navTrigger, .navlinks').click(function () {
 
 /* ================= WEBSITE LANGUAGE ================ */
 $('.lang-en').on( "click", function() {
-    window.location.replace("http://jumbie.netlify.app/index_pt.html/");
+    window.location.href = "http://jumbie.netlify.app/index_pt.html/";
 })
 $('.lang-pt').on( "click", function() {
-    window.location.replace("http://jumbie.netlify.app/");
+    window.location.href = "http://jumbie.netlify.app/";
 })
 
 
 /* ================= WEBSITE LINKING ================ */
 $('.nav-home, .logo').on( "click", function() {
-    show_home_section();
+    window.location.href = window.location.href.split('?')[0];
 })
 function show_home_section() {
     dark_theme();
@@ -121,7 +124,7 @@ function show_home_section() {
 }
 
 $('.nav-about').on( "click", function() {
-    show_about_section();
+    window.location.href = "?section=about";
 })
 function show_about_section() {
     light_theme();
@@ -133,7 +136,7 @@ function show_about_section() {
 }
 
 $('.nav-services').on( "click", function() {
-    show_services_section();
+    window.location.href = "?section=services";
 })
 function show_services_section() {
     light_theme();
@@ -145,7 +148,7 @@ function show_services_section() {
 }
 
 $('.nav-portfolio').on( "click", function() {
-    show_portfolio_section();
+    window.location.href = "?section=portfolio";
 })
 function show_portfolio_section() {
     light_theme();
@@ -157,7 +160,7 @@ function show_portfolio_section() {
 }
 
 $('.nav-contact, .action-contact').on( "click", function() {
-    show_contact_section();
+    window.location.href = "?section=contact";
 })
 function show_contact_section() {
     light_theme();
